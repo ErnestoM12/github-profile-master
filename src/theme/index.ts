@@ -4,18 +4,20 @@ const themeOptions: ThemeOptions = {
   palette: {
     mode: 'dark',
     primary: {
-      main: '#1976d2',
+      main: '#1D1B48',
+      light: '#ffffff',
+      dark: '#0D1117',
     },
     secondary: {
-      main: '#dc004e',
+      main: '#97A3B6',
     },
     background: {
-      default: '#121826',
-      paper: '#1c2435',
+      default: '#111729',
+      paper: '#20293A',
     },
     text: {
-      primary: '#ffffff',
-      secondary: '#b0b3b8',
+      primary: '#CDD5E0',
+      secondary: '#97A3B6',
     },
   },
   typography: {
