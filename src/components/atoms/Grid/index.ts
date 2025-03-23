@@ -1,1 +1,1 @@
-export { default as Grid } from '@mui/material/Grid';
+export { default as Grid } from '@mui/material/Grid2';
