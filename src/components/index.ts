@@ -7,3 +7,7 @@ export * from './atoms/Icons';
 export * from './atoms/InputBase';
 export * from './atoms/Paper';
 export * from './atoms/Typography';
+export * from './molecules/StatCard';
+export * from './molecules/ProjectCard';
+export * from './molecules/UserProfileCard';
+export * from './molecules/SearchBar';
