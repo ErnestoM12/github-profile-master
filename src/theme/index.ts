@@ -21,21 +21,21 @@ const themeOptions: ThemeOptions = {
   typography: {
     fontFamily: "'Be Vietnam Pro', sans-serif",
     h1: {
-      fontSize: '2rem',
+      fontSize: '1.75rem',
       fontWeight: 400,
       color: '#CDD5E0 !important',
     },
     h2: {
-      fontSize: '1.25rem',
+      fontSize: '1rem',
       fontWeight: 300,
       color: '#CDD5E0 !important',
     },
     body1: {
-      fontSize: '1rem',
+      fontSize: '0.813rem',
       color: '#97A3B6 !important',
     },
     body2: {
-      fontSize: '0.75rem',
+      fontSize: '0.594rem',
       color: '#97A3B6 !important',
     },
   },
