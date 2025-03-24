@@ -2,15 +2,7 @@ import { Card } from '../../atoms/Card';
 import { H2, Body1, Body2 } from '../../atoms/Typography';
 import { StyledChieldAltIcon, StyledNestingIcon, StyledStarIcon } from './styled';
 import { Grid } from '../../atoms/Grid';
-
-interface ProjectCardProps {
-  projectaName: string;
-  projectDescription: string;
-  license: string | null;
-  forks: number;
-  stars: number;
-  lastUpdated: string;
-}
+import { ProjectCardProps } from '../../../interfaces';
 
 const ProjectCard = ({
   projectaName,

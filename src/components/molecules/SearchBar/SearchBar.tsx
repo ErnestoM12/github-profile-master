@@ -2,13 +2,7 @@ import { BUTTON_VARIANTS } from '../../atoms/Button';
 import { SearchIcon } from '../../atoms/Icons';
 import { InputBase } from '../../atoms/InputBase';
 import { StyledPaper, StyledButton } from './styled';
-
-interface SearchBarProps {
-  onSearch: () => Promise<void>;
-  searchText: string;
-  handleChangeText: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  textPlaceHolder: string;
-}
+import { SearchBarProps } from '../../../interfaces';
 
 const SearchBar = ({ onSearch, searchText, handleChangeText, textPlaceHolder }: SearchBarProps) => {
   return (

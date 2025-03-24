@@ -1,11 +1,7 @@
 import { AvatarWrapper, OuterContainer, StyledAvatar } from './styled';
+import { UserProfileCardProps } from '../../../interfaces';
 
-interface UserProfileCardPRops {
-  urlImage: string;
-  type?: 'large' | 'medium' | 'small';
-}
-
-const UserProfileCard = ({ urlImage, type = 'large' }: UserProfileCardPRops) => {
+const UserProfileCard = ({ urlImage, type = 'large' }: UserProfileCardProps) => {
   return (
     <OuterContainer type={type} elevation={0}>
       <AvatarWrapper elevation={1}>
