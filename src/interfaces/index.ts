@@ -5,6 +5,7 @@ interface ProjectCardProps {
   forks: number;
   stars: number;
   lastUpdated: string;
+  projectUrl?: string | null;
 }
 
 interface SearchBarProps {
@@ -31,4 +32,29 @@ interface TopSectionProps {
   location: StatCardProps;
 }
 
-export type { ProjectCardProps, SearchBarProps, StatCardProps, UserProfileCardProps, TopSectionProps };
+interface Project {
+  id: number;
+  name: string;
+  description: string | null;
+  license: string | null;
+  forks: number;
+  stargazersCount: number;
+  updatedAt: string;
+  projectUrl: string;
+}
+
+interface ProjectsSectionProps {
+  projects: Project[];
+  title: string;
+  description: string;
+  buttonText: string;
+}
+
+export type {
+  ProjectCardProps,
+  SearchBarProps,
+  StatCardProps,
+  UserProfileCardProps,
+  TopSectionProps,
+  ProjectsSectionProps,
+};

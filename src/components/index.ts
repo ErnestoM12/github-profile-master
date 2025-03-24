@@ -13,3 +13,4 @@ export * from './molecules/UserProfileCard';
 export * from './molecules/SearchBar';
 export * from './organisms/Hero';
 export * from './organisms/TopSection';
+export * from './organisms/ProjectsSection';

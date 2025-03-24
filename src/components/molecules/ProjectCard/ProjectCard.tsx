@@ -1,6 +1,6 @@
 import { Card } from '../../atoms/Card';
 import { H2, Body1, Body2 } from '../../atoms/Typography';
-import { StyledChieldAltIcon, StyledNestingIcon, StyledStarIcon } from './styled';
+import { StyledChieldAltIcon, StyledNestingIcon, StyledStarIcon, StyledLink } from './styled';
 import { Grid } from '../../atoms/Grid';
 import { ProjectCardProps } from '../../../interfaces';
 
@@ -11,12 +11,19 @@ const ProjectCard = ({
   forks = 0,
   stars = 0,
   lastUpdated,
+  projectUrl,
 }: ProjectCardProps) => {
   return (
     <Card>
       <Grid container spacing={1}>
         <Grid size={12}>
-          <H2>{projectaName}</H2>
+          {projectUrl ? (
+            <StyledLink href={projectUrl} target="_blank" rel="noopener noreferrer">
+              <H2>{projectaName}</H2>
+            </StyledLink>
+          ) : (
+            <H2>{projectaName}</H2>
+          )}
         </Grid>
         <Grid size={12}>
           <Body1>{projectDescription}</Body1>

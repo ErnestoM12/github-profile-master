@@ -12,5 +12,9 @@ const StyledNestingIcon = styled(NestingIcon)({
 const StyledStarIcon = styled(StarIcon)({
   marginRight: '0.125rem',
 });
+const StyledLink = styled('a')({
+  textDecoration: 'none',
+  color: 'inherit',
+});
 
-export { StyledChieldAltIcon, StyledNestingIcon, StyledStarIcon };
+export { StyledChieldAltIcon, StyledNestingIcon, StyledStarIcon, StyledLink };
