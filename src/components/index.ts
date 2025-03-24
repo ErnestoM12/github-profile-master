@@ -11,3 +11,5 @@ export * from './molecules/StatCard';
 export * from './molecules/ProjectCard';
 export * from './molecules/UserProfileCard';
 export * from './molecules/SearchBar';
+export * from './organisms/Hero';
+export * from './organisms/TopSection';
