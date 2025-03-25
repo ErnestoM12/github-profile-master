@@ -25,7 +25,7 @@ interface StatCardProps {
 }
 
 interface UserProfileCardProps {
-  urlImage: string | null;
+  urlImage: string | null | undefined;
   type?: 'large' | 'medium' | 'small';
 }
 
@@ -40,7 +40,7 @@ interface Project {
   id: number | string;
   name: string;
   description: string | null;
-  license?: string;
+  license?: string | null | undefined;
   forks: number;
   stargazersCount: number;
   updatedAt: string;

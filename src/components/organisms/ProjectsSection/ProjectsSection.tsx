@@ -31,7 +31,7 @@ const ProjectsSection = ({ title, description, buttonText, projects }: ProjectsS
             <ProjectCard
               projectaName={project.name}
               projectDescription={project.description ?? 'No description available'}
-              license={project.license}
+              license={project.license ?? null}
               forks={project.forks}
               stars={project.stargazersCount}
               lastUpdated={project.updatedAt}
