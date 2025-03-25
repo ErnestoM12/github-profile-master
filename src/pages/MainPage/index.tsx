@@ -65,7 +65,7 @@ const MainPage = () => {
 
   useEffect(() => {
     void handleSearch();
-  }, []);
+  });
 
   return (
     <StyledGridMainContent container size={12}>
