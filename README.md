@@ -33,7 +33,7 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](https://raw.githubusercontent.com/ErnestoM12/github-profile-master/main/public/mobile-demo.png)
 
 This project is a frontend practice challenge from [DevChallenges.io](https://devchallenges.io/), aimed at improving my frontend skills and applying the knowledge I have acquired so far. The goal was to create a responsive and user-friendly application while experimenting with modern web technologies like **React**, **TypeScript**, and **Material UI**.
 
