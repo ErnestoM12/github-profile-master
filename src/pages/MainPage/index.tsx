@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { formatDistanceToNow } from 'date-fns';
 import { Hero, TopSection, ProjectsSection } from '../../components';
 import { StyledItemsContainer, StyledGridItem, StyledGridMainContent } from './styled';
 import { ApiService } from '../../services';
@@ -36,16 +37,22 @@ const MainPage = () => {
         location: userData.location,
       });
 
-      const formattedProjects: ProjectsSectionProps['projects'] = projectUser.map((project: GitHubRepoResponse) => ({
-        id: project.node_id,
-        name: project.name,
-        description: project.description,
-        license: project.license?.spdx_id,
-        forks: project.forks,
-        stargazersCount: project.stargazers_count,
-        updatedAt: project.updated_at,
-        projectUrl: project.html_url,
-      }));
+      const formattedProjects: ProjectsSectionProps['projects'] = projectUser.map((project: GitHubRepoResponse) => {
+        const updatedAt = project.updated_at
+          ? formatDistanceToNow(new Date(project.updated_at), { addSuffix: true })
+          : 'Recently';
+
+        return {
+          id: project.node_id,
+          name: project.name,
+          description: project.description,
+          license: project.license?.spdx_id,
+          forks: project.forks,
+          stargazersCount: project.stargazers_count,
+          updatedAt: `Updated ${updatedAt}`,
+          projectUrl: project.html_url,
+        };
+      });
 
       setProjects(formattedProjects);
     } catch (error) {

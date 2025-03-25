@@ -46,7 +46,7 @@ const ProjectCard = ({
           </Grid>
 
           <Grid size="auto" display="flex" alignItems="center">
-            <Body2>{lastUpdated}</Body2>
+            <Body2 ml={2}>{lastUpdated}</Body2>
           </Grid>
         </Grid>
       </Grid>
