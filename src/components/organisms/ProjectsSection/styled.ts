@@ -19,7 +19,7 @@ const ScrollableGridContainer = styled(Grid)(({ theme }) => ({
   },
 
   [theme.breakpoints.down('sm')]: {
-    maxHeight: '31.60rem',
+    maxHeight: '16rem',
   },
 }));
 

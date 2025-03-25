@@ -14,9 +14,9 @@ const ProjectsSection = ({ title, description, buttonText, projects }: ProjectsS
   };
 
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} size={12}>
       <Grid size={12}>
-        <H1>{title}</H1>
+        <H1 mb={1}>{title}</H1>
         <H2>{description}</H2>
       </Grid>
       <ScrollableGridContainer

@@ -1,11 +1,12 @@
 import { SearchBar } from '../../molecules/SearchBar';
 import { Grid } from '../../atoms/Grid';
+import { Body1 } from '../../atoms/Typography';
 import { StyledGridContainer, StyledGridBackground, StyledGridContentItems } from './styled';
-import { SearchBarProps } from '../../../interfaces';
+import { HeroProps } from '../../../interfaces';
 
-const Hero = ({ onSearch, searchText, handleChangeText, textPlaceHolder }: SearchBarProps) => {
+const Hero = ({ onSearch, searchText, handleChangeText, textPlaceHolder, error }: HeroProps) => {
   return (
-    <StyledGridContainer container>
+    <StyledGridContainer container size={12}>
       <StyledGridBackground size={12} />
       <StyledGridContentItems container spacing={2}>
         <Grid size={{ xs: 11, md: 8, lg: 4 }} justifyContent="center">
@@ -16,6 +17,7 @@ const Hero = ({ onSearch, searchText, handleChangeText, textPlaceHolder }: Searc
             textPlaceHolder={textPlaceHolder}
           />
         </Grid>
+        {error && <Body1>{error}</Body1>}
       </StyledGridContentItems>
     </StyledGridContainer>
   );

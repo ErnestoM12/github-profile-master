@@ -16,7 +16,7 @@ const StyledGridBackground = styled(Grid)(({ theme }) => ({
   position: 'absolute',
   width: '100%',
   height: '100%',
-  zIndex: -1,
+  zIndex: 1,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   backgroundImage: `url(${heroLargeImage})`,
@@ -36,6 +36,7 @@ const StyledGridContentItems = styled(Grid)(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     marginTop: '0.5rem',
   },
+  zIndex: 2,
 }));
 
 export { StyledGridContainer, StyledGridBackground, StyledGridContentItems };
