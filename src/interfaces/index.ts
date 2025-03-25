@@ -15,13 +15,17 @@ interface SearchBarProps {
   textPlaceHolder: string;
 }
 
+interface HeroProps extends SearchBarProps {
+  error: string | null;
+}
+
 interface StatCardProps {
   label: string;
-  data: string | number;
+  data: string | number | null;
 }
 
 interface UserProfileCardProps {
-  urlImage: string;
+  urlImage: string | null;
   type?: 'large' | 'medium' | 'small';
 }
 
@@ -33,10 +37,10 @@ interface TopSectionProps {
 }
 
 interface Project {
-  id: number;
+  id: number | string;
   name: string;
   description: string | null;
-  license: string | null;
+  license?: string;
   forks: number;
   stargazersCount: number;
   updatedAt: string;
@@ -50,11 +54,42 @@ interface ProjectsSectionProps {
   buttonText: string;
 }
 
+interface GitHubRepoResponse {
+  node_id: string;
+  name: string;
+  description: string | null;
+  license?: {
+    spdx_id: string;
+  };
+  forks: number;
+  stargazers_count: number;
+  updated_at: string;
+  html_url: string;
+}
+
+interface GithubUserReponse {
+  avatar_url: string;
+  followers: number;
+  following: number;
+  location: string | null;
+}
+
+interface UserInfoState {
+  urlImage: UserProfileCardProps['urlImage'];
+  followers: StatCardProps['data'];
+  following: StatCardProps['data'];
+  location: StatCardProps['data'];
+}
+
 export type {
+  GitHubRepoResponse,
+  GithubUserReponse,
+  HeroProps,
   ProjectCardProps,
+  ProjectsSectionProps,
   SearchBarProps,
   StatCardProps,
-  UserProfileCardProps,
   TopSectionProps,
-  ProjectsSectionProps,
+  UserInfoState,
+  UserProfileCardProps,
 };
