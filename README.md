@@ -1,56 +1,68 @@
-# github-profile-master
-This is a challenge from DevChallenges.io designed to enhance my frontend development skills using React, TypeScript, pnpm, MUI, and more.
-# React + TypeScript + Vite
+<h1 align="center">github-profile-master| devChallenges</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+   Solution for a challenge <a href="https://devchallenges.io/challenge/github-profile" target="_blank">GitHub Profile</a> from <a href="http://devchallenges.io" target="_blank">devChallenges.io</a>.
+</div>
 
-Currently, two official plugins are available:
+<div align="center">
+  <h3>
+    <a href="https://ernestom12.github.io/github-profile-master/}">
+      Demo
+    </a>
+    <span> | </span>
+    <a href="https://ernestom12.github.io/github-profile-master/">
+      Solution
+    </a>
+    <span> | </span>
+    <a href="https://devchallenges.io/challenge/github-profile">
+      Challenge
+    </a>
+  </h3>
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+- [Overview](#overview)
+  - [What I learned](#what-i-learned)
+- [Built with](#built-with)
+- [Features](#features)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<!-- OVERVIEW -->
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Overview
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project is a frontend practice challenge from [DevChallenges.io](https://devchallenges.io/), aimed at improving my frontend skills and applying the knowledge I have acquired so far. The goal was to create a responsive and user-friendly application while experimenting with modern web technologies like **React**, **TypeScript**, and **Material UI**.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+By working on this challenge, I focused on refining my ability to build scalable components, maintain clean code, and optimize performance. It provided a great opportunity to reinforce my existing skills and keep up with the latest practices in frontend development.
+
+### What I learned
+
+In this project, I focused on staying current with modern tools and technologies. I applied **Atomic Design** for creating scalable components and embraced **TypeScript** to ensure type safety. I also used **React** and **Material UI** to build a responsive and user-friendly interface.
+
+I incorporated **CSS custom properties**, **Flexbox**, and **styled-components** for flexible and maintainable styling. To ensure code quality, I set up **linters**, **Prettier**, and **Husky** for automated checks. I also optimized package management with **pnpm** and handled data fetching with **Axios**.
+
+This project allowed me to stay up to date with industry best practices and improve my development workflow.
+
+### Built with
+
+- Atom desing
+- CSS custom properties
+- Flexbox
+- [MaterialUI](https://mui.com/material-ui/)
+- [React](https://reactjs.org/)
+- styled-components
+- pnpm
+- Axios
+- Typescrypt
+- linter
+- Husky
+- Prettier
+
+## Author
+
+- Website [github-profile-master](https://github.com/ErnestoM12/github-profile-master})
+- GitHub [@ErnestoM12](https://github.com/ErnestoM12})
