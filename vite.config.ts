@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import svgr from 'vite-plugin-svgr';
+import { ghPages } from 'vite-plugin-gh-pages';
 
 export default defineConfig({
   plugins: [
@@ -16,6 +17,10 @@ export default defineConfig({
         icon: true,
       },
     }),
+    ghPages({
+      branch: 'gh-pages',
+      dotfiles: true,
+    }),
   ],
   resolve: {
     alias: {
@@ -27,4 +32,6 @@ export default defineConfig({
     sourcemap: true,
     minify: 'terser',
   },
+  base: process.env.NODE_ENV === 'production' ? '/github-profile-master/' : '/',
+  publicDir: 'public',
 });

@@ -72,24 +72,26 @@ const MainPage = () => {
         textPlaceHolder="username"
         error={error}
       />
-      <StyledItemsContainer container size={12}>
-        <StyledGridItem size={12}>
-          <TopSection
-            userInfo={{ urlImage: userInfo?.urlImage ?? '' }}
-            followers={{ label: 'Followers', data: userInfo?.followers ?? '' }}
-            following={{ label: 'Following', data: userInfo?.following ?? '' }}
-            location={{ label: 'Location', data: userInfo?.location ?? '' }}
-          />
-        </StyledGridItem>
-        <StyledGridItem size={12}>
-          <ProjectsSection
-            title="Github"
-            description="How people build software."
-            buttonText="View all repositories"
-            projects={projects}
-          />
-        </StyledGridItem>
-      </StyledItemsContainer>
+      {userInfo && (
+        <StyledItemsContainer container size={12}>
+          <StyledGridItem size={12}>
+            <TopSection
+              userInfo={{ urlImage: userInfo.urlImage ?? '' }}
+              followers={{ label: 'Followers', data: userInfo.followers ?? '' }}
+              following={{ label: 'Following', data: userInfo.following ?? '' }}
+              location={{ label: 'Location', data: userInfo.location ?? '' }}
+            />
+          </StyledGridItem>
+          <StyledGridItem size={12}>
+            <ProjectsSection
+              title="Github"
+              description="How people build software."
+              buttonText="View all repositories"
+              projects={projects}
+            />
+          </StyledGridItem>
+        </StyledItemsContainer>
+      )}
     </StyledGridMainContent>
   );
 };

@@ -8,7 +8,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "predeploy": "pnpm run build",
+    "deploy": "vite build && vite deploy"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -45,6 +47,7 @@
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.26.1",
     "vite": "^6.2.0",
+    "vite-plugin-gh-pages": "^1.0.1",
     "vite-plugin-svgr": "^4.3.0"
   }
 }
