@@ -4,7 +4,7 @@ import heroLargeImage from '../../../assets/hero-image-github-profile.jpg';
 import heroSmallImage from '../../../assets/hero-image-github-profile-sm.jpg';
 
 const StyledGridContainer = styled(Grid)(({ theme }) => ({
-  height: 300,
+  height: 260,
   position: 'relative',
   overflow: 'hidden',
   [theme.breakpoints.down('sm')]: {
@@ -32,7 +32,7 @@ const StyledGridContentItems = styled(Grid)(({ theme }) => ({
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'flex-start',
-  marginTop: '3.5rem',
+  marginTop: '2rem',
   [theme.breakpoints.down('sm')]: {
     marginTop: '0.5rem',
   },
