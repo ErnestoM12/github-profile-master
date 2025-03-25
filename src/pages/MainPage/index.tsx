@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { formatDistanceToNow } from 'date-fns';
 import { Hero, TopSection, ProjectsSection } from '../../components';
 import { StyledItemsContainer, StyledGridItem, StyledGridMainContent } from './styled';
@@ -7,7 +7,7 @@ import { ProjectsSectionProps, GitHubRepoResponse, GithubUserReponse, UserInfoSt
 const apiService = new ApiService();
 
 const MainPage = () => {
-  const [searchText, setSearchText] = useState<string>('');
+  const [searchText, setSearchText] = useState<string>('ErnestoM12');
   const [projects, setProjects] = useState<ProjectsSectionProps['projects']>([]);
   const [userInfo, setUserInfo] = useState<UserInfoState | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -62,6 +62,10 @@ const MainPage = () => {
       setProjects([]);
     }
   };
+
+  useEffect(() => {
+    void handleSearch();
+  }, []);
 
   return (
     <StyledGridMainContent container size={12}>
