@@ -3,7 +3,7 @@ import MainPage from './pages/MainPage';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename={import.meta.env.MODE === 'production' ? '/github-profile-master' : '/'}>
       <Routes>
         <Route path="/" element={<MainPage />} />
       </Routes>
